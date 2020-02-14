@@ -27,9 +27,9 @@ public class BroadcastHelper {
     public static void sendIntentExplicitly(Context context, Intent intent) throws ShortcutBadgeException {
         List<ResolveInfo> resolveInfos = resolveBroadcast(context, intent);
 
-        if (resolveInfos.size() == 0) {
-            throw new ShortcutBadgeException("unable to resolve intent: " + intent.toString());
-        }
+        // if (resolveInfos.size() == 0) {
+        //    throw new ShortcutBadgeException("unable to resolve intent: " + intent.toString());
+        // }
 
         for (ResolveInfo info : resolveInfos) {
             Intent actualIntent = new Intent(intent);
